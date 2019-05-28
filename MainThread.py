@@ -21,7 +21,7 @@ DiMaAccuracy = 0
 
 def diabetesF():
     global DiFeModel, DiFeAccuracy
-    d = pd.read_csv('Diabetes_female_data.csv')
+    d = pd.read_csv('data/Diabetes_female_data.csv')
 
     X = d.drop(['Outcome'], axis=1)
     Y = d.Outcome
@@ -40,7 +40,7 @@ def diabetesF():
 
 def diabetesM():
     global DiMaModel, DiMaAccuracy
-    d = pd.read_csv('Diabetes_male_data.csv')
+    d = pd.read_csv('data/Diabetes_male_data.csv')
 
     X = d.drop(['Outcome'], axis=1)
     Y = d.Outcome
@@ -59,7 +59,7 @@ def diabetesM():
 
 def breastCancer():
     global BrCnAccuracy, BrCnModel
-    data = pd.read_csv("Breast_Cancer_data.csv", header=0)
+    data = pd.read_csv("data/Breast_Cancer_data.csv", header=0)
     data['diagnosis'] = data['diagnosis'].map({'M': 1, 'B': 0})
 
     X = data.drop(['diagnosis'], axis=1)
